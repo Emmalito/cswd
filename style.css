@@ -1,0 +1,36 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul
+{
+	display: flex;
+	border: 1px solid black;
+}
+
+li
+{
+	margin: 25px;
+}
+
+#liste_footer
+{
+	display: flex;
+	border: 1px solid black;
+}
+
+#liste_footer div
+{
+	display: flex;
+	flex-direction: column;
+	margin: 25px;
+}
+
+#liste_footer ul
+{
+	display: flex;
+	flex-direction: column;
+}
