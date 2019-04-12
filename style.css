@@ -1,3 +1,14 @@
+/*
+-------------------------------En tête-------------------------------
+*/
+
+header
+{
+	margin: 10px;
+}
+
+/*  Titre  */
+
 .titre
 {
     color: #000000;
@@ -13,6 +24,7 @@
 {
     text-align: left;
 }
+
 @media screen and (max-width: 600px)
 {
     .titre
@@ -35,10 +47,8 @@
 {
     display: flex;
     justify-content: center;
-
 }
 
-}
 
 table
 {
@@ -46,36 +56,23 @@ table
     width: 100%;
     justify-content: center;
 }
-.matiere
-{
-    font-style: normal;
-    font-size: 1.75em;
-}
 
-header
-{
-	margin: 10px;
-}
-footer
-{
-	margin: 10px;
-}
-
+/* Barre de navigation */
 
 .menu 
 {
     list-style-type: none;
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;  /* ou block pour vertical */
     flex-flow: row;
-    width: 100%;
     justify-content: center; /* ou bien flex-start ou bien flex-end */
     /*background-color: #CCCCCC;*/
     border: 4px solid #AAAAAA;
 }
 
-ul.menu li a 
+.menu li a 
 {
     text-decoration: none;
     padding: 0.85em 1.72em;
@@ -83,13 +80,28 @@ ul.menu li a
     justify-content: space-around;
     color: black;
     background-color: white;
-    transition: background .25s ease-in-out;
+    /*transition: background .25s ease-in-out;*/
 }
 
 ul.menu li a:hover
 {
     background-color: #AAAAAA;
 }
+
+
+/*
+-------------------------------Corps-------------------------------
+*/
+
+.matiere
+{
+    font-style: normal;
+    font-size: 1.75em;
+}
+
+
+
+
 
 
 @media screen and (max-width: 640px) 
@@ -104,34 +116,8 @@ ul.menu li a:hover
     background-color : #CCCCCC;
   }
 }
-body {
-    background-color: #FFFFFF; //couleur du fond, à ne pas toucher
-}
-section, aside, header, footer
-{
-    border: 4px solid #AAAAAA;
-    padding: 2.75px;
-}
-header, footer
-{
-    background-color: #FFFFFF;
-}
-#coteacote {
-    display: flex;
-}
-section {
-width: 100%;
-    background-color: white;
-}
-aside {
-width: 100%;
-    background-color: #beige;
-}
-#tout {
-    width: 800px;
-    margin: 0 auto;
-}
-/* max-width pour les petits  ́ecrans */ @media screen and (max-width: 640px) {
+
+max-width /*pour les petits  ́ecrans*/ @media screen and (max-width: 640px) {
 #coteacote {
         display: block;
     }
@@ -141,9 +127,15 @@ width: 100%;
     }
 }
 
+/*
+-------------------------------Pied de page-------------------------------
+*/
 
-
-
-
+footer
+{
+	margin: 10px;
+	border: 4px solid #AAAAAA;
+    padding: 2.75px;
+}
 
 
