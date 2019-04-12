@@ -4,37 +4,15 @@
 
 <footer>
 
-	<p>Ce site à été créé par Emmalito Delar, Mathilde Picaud et Jordan Proctor.</p> <br/>
-	<ul id="liste_footer">
+	<h4>Liens utiles</h4>
 
-		<div id="Unisite">
-			<label>Unisite<ul>
-				<li><a href="#">Nous</a></li>
-				<li><a href="#">Notre histoire</a></li>
-				<li><a href="#">Nos actualités</a></li>
-				<li><a href="#">Nos réseaux</a></li>			
-			</ul></label>
-		</div>
+    <a href="https://ent.u-bordeaux.fr/uPortal/f/welcome/normal/render.uP">l'ent MIASHS</a>
+    <br>
+    <a href="https://www.labri.fr/perso/schlick/EDT/index.html">l'emploi du temps des MIASHS (aka EDT)</a>
+    <br>
+    <a href="https://moodle-miashs.uf-mi.u-bordeaux.fr">le Moodle des MIASHS</a></footer><br/>
 
-		<div id="Contacter">
-			<label>Nous contacter<ul>
-				<li><a href="#">Mail</a></li>
-				<li><a href="#">Facebook</a></li>
-				<li><a href="#">Twitter</a></li>
-				<li><a href="#">Unisite</a></li>			
-			</ul></label>
-		</div>
-
-		<div id="En_plus">
-			<label>En plus<ul>
-				<li><a href="#">QQC</a></li>
-				<li><a href="#">QQC d'autre</a></li>
-				<li><a href="#">Encore </a></li>
-				<li><a href="#">Et pour finir</a></li>			
-			</ul></label>
-		</div>
-
-	</ul>
+	<p>Ce site a été créé par Emmalito DELAR, Mathilde PICAUD et Jordan PROCTOR</p>
 
 </footer>
 

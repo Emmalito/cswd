@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+require_once("connexion_base.php");
+?>
 
 <!DOCTYPE html>
 <html lang='fr'>
@@ -10,18 +12,28 @@
 
     <body> 
 
-    	<img src="logo.png" height="200" weight="173"> <label>Unisite</label>
+    	<table class="tete">
+    		<tr>
+    			<td class="titre" id="titre_right">UNI</td>
+    
+    			<td align="center" id="logo_tete"><img src="images/logo1.png" height="200" weight="173"/></td>
+
+    			<td class="titre" id="titre_left">SITE</td>
+    		</tr>
+    	</table>
+
 
     	<nav>
-    		<ul>
+    		<ul class="menu">
     			<?php 
-    			$menu = array('home', 'profile', 'progress', 'discussion', 'projet', 'coatcher' );
+    			$menu = array('Accueil', 'Profil', 'Forum', 'Discussion', 'Projet', 'Tuteur' );
     			for ($i=0; $i < 6 ; $i++) 
     			{ 
     				$nom = strtolower($menu[$i]);
+    				$nom_maj = strtoupper($nom);
     				if ($nom !== $titre ) 
     				{
-    					echo "<li><a href='$nom.php'>$nom</a></li>", PHP_EOL;
+    					echo "<li><a href='$nom.php'>$nom_maj</a></li>", PHP_EOL;
     				}
     				else
     				{
@@ -29,12 +41,14 @@
     				}
     			}
     			?>
+    			<li><a href="connexion.php"><img src="images/power.png"/></a></li>
     		</ul>
 
     	</nav>
 
     	<div id="corps">
     		<br/>
+
 
 
 
