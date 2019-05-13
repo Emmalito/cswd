@@ -14,15 +14,15 @@ include('header.php'); ?>
 		echo "<ul class='matière'>", PHP_EOL;
 		for ($e=1; $e < 3 ; $e++) 
 		{ 
-			echo "<li class='semestre'> Semestre $semestre </li> ", PHP_EOL;
-			$semestre++;
+			echo "<li class='semestre'> Semestre $semestre </li> ", PHP_EOL;			
 			echo "<ul class='matiere_semestre'>", PHP_EOL;
-			$req = $pdo->query("SELECT matiere,numero FROM `ue` WHERE numero LIKE '$e%'");
+			$req = $pdo->query("SELECT matiere,numero FROM `ue` WHERE numero LIKE '$semestre%'");
 			while ($donnee = $req->fetch()) 
 			{
 				echo "<li class='ue'> <a href='cours.php?id=$donnee[1]'> $donnee[0] </a></li>", PHP_EOL;
 			}
 			echo "</ul>", PHP_EOL;
+			$semestre++;
 		}
 		echo "</ul>", PHP_EOL;
 		echo "</label>", PHP_EOL;
