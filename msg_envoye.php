@@ -4,24 +4,23 @@ include('header.php');
 
 if (isset($_GET['id']) and isset($_SESSION['id'])) 
 {
+	echo "<a href='discussion.php'>Retour</a> <br/>";
 	$id_discussion = $_GET['id'];
 	$req = $pdo->query("SELECT pseudo, titre, texte, discussion.date FROM discussion INNER JOIN membre ON id_receveur = membre.id WHERE discussion.id = $id_discussion");
 	$donnee = $req->fetch();
 
 	echo "<h2>$donnee[1]</h2>", PHP_EOL;
 	echo "$donnee[2] <br/> de $donnee[0] le $donnee[3] <br/>", PHP_EOL;
-	echo "<a href='rediger.php'>Répondre</a> <br/>", PHP_EOL;
-	echo "<a href='discussion.php'>Retour</a> <br/>";
 
 	$req2 = $pdo->query("UPDATE discussion SET lu = '1' WHERE id = $id_discussion");
 
 }
 elseif (isset($_SESSION['id'])) 
 {
-	echo "<a href='rediger.php'>Rédiger</a> <a href='msg_envoye.php'>Boîte d'envoi</a> <br/>", PHP_EOL;
+	echo "<a href='discussion.php'>Retour</a> <br/>";
 	$id = $_SESSION['id'];
 
-	$req = $pdo->query("SELECT pseudo, titre, texte, discussion.date, discussion.id FROM discussion INNER JOIN membre ON id_expediteur = membre.id WHERE id_receveur = $id");
+	$req = $pdo->query("SELECT pseudo, titre, texte, discussion.date, discussion.id FROM discussion INNER JOIN membre ON id_receveur = membre.id WHERE id_expediteur = $id");
 
 	echo "<ul id='message'> ", PHP_EOL;
 	while ($donnee = $req->fetch()) 

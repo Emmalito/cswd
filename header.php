@@ -6,7 +6,7 @@ require_once("connexion_base.php");
 <html lang='fr'>
     <head>
          <meta charset="utf-8" />
-         <link rel="stylesheet" href="style.css" media="all" />
+         <link rel="stylesheet" href="css/style.css" media="all" />
          <?php echo "<title> $titre </title>"; ?>
     </head>
 
@@ -26,7 +26,7 @@ require_once("connexion_base.php");
     	<nav>
     		<ul class="menu">
     			<?php 
-    			$menu = array('Accueil', 'Profil', 'Forum', 'Discussion', 'Projet', 'Tuteur' );
+    			$menu = array('Accueil', 'Profil', 'Forum', 'Discussion', 'Projets', 'Tuteurs' );
     			for ($i=0; $i < 6 ; $i++) 
     			{ 
     				$nom = strtolower($menu[$i]);
@@ -41,7 +41,17 @@ require_once("connexion_base.php");
     				}
     			}
     			?>
-    			<li><a href="connexion.php"><img src="images/power.png"/></a></li>
+    			<?php
+    			if (isset($_SESSION['id'])) 
+    			{?>
+    				<li><a href="deconnexion.php"><img src="images/power.png"/></a></li>
+    			<?php }
+    			else
+    			{?>
+    				<li><a href="profil.php"><img src="images/power.png"/></a></li>
+    			<?php
+    			} ?>
+    			
     		</ul>
 
     	</nav>

@@ -14,7 +14,8 @@ if (isset($_POST['pseudo']))
 		$_SESSION['pseudo'] = $rep['pseudo'];
 		$_SESSION['id'] = $rep['id'];
 		$_SESSION['classe'] = $rep['classe'];
-		echo "Vous êtes connecté.";
+		echo "Vous êtes connecté. <br/>", PHP_EOL;
+		echo "<a href='profil.php'> Mes Infos </a>", PHP_EOL;
 	}
 	else
 	{
@@ -28,9 +29,9 @@ else
 
 <form action="connexion.php" method="post" class="formulaire">
 
-	<label>Pseudo<input type="text" name="pseudo" required></label><br/>
-	<label>Mot de passe<input type="password" name="mdp" required></label><br/>
-	<input type="submit" name="envoyer">
+	<label for="pseudo">Pseudo : </label><input type="text" name="pseudo" required id="pseudo"><br/>
+	<label for="mdp">Mot de passe : </label><input type="password" name="mdp" required id="mdp"><br/>
+	<input type="submit" value="Envoyer">
 
 </form>
 
